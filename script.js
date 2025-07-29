@@ -57,10 +57,10 @@ $(document).ready(function() {
     ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
       origin: "right"
     });
-    ScrollReveal().reveal(".project-title, .contact-title", {
+    ScrollReveal().reveal(".project-title, .contact-title, .certifications-title", {
       origin: "top"
     });
-    ScrollReveal().reveal(".projects, .contact", {
+    ScrollReveal().reveal(".projects-grid, .contact, .certifications-grid", {
       origin: "bottom"
     });
 
@@ -109,6 +109,3 @@ $(document).ready(function() {
       }
     });
   }
-  
-
- 

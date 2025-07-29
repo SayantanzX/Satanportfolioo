@@ -28,10 +28,7 @@ body{
   margin:auto;
 }
 
-
-
-
-      /*---------------------------Header---------------------------*/
+/*---------------------------Header---------------------------*/
 
 .header-area{
   padding:25px 0;
@@ -319,66 +316,295 @@ profile-photo .img{
   text-align: justify;
 }
 
-
-
-/*---------------------------Projects---------------------------*/
-.project-content{
-  padding: 90px 0;
-  /* color:#fff;  */
+/*---------------------------Certifications---------------------------*/
+.certifications-content {
+  padding: 80px 0;
+  background-color: #202020;
 }
-.project-title{
-  margin-bottom: 60px;
+
+.certifications-title {
   text-align: center;
+  margin-bottom: 60px;
 }
-.project-title h4{
-  text-transform: uppercase;
+
+.certifications-title h4 {
+  color: #fed700;
   font-size: 40px;
   line-height: 40px;
-  color: #fed700;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
-.project-title p{
+
+.certifications-title p {
   color: #e5e5e5;
+  font-size: 16px;
 }
-.projects{
-  display: flex;
-  justify-content:space-between;
-  flex-wrap: wrap;
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 32%;
-    transition: .3s;
+
+.certification-card {
+  background: linear-gradient(135deg, #333 0%, #404040 100%);
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-.project i{
-  background-color: #fed700;
-  width: 60px;
-  height: 60px;
-  color: #333;
-  font-size: 26px;
-  line-height: 60px;
-  border-radius: 50%;
+
+.certification-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(254, 215, 0, 0.1), transparent);
+  transition: left 0.5s ease;
 }
-.project h4{
-  font-size: 26px;
-  text-transform: capitalize;
-  margin: 20px 0;
+
+.certification-card:hover::before {
+  left: 100%;
 }
-.project p{
-  text-align: justify;
-}
-.project:hover{
+
+.certification-card:hover {
   border-color: #fed700;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(254, 215, 0, 0.2);
 }
 
+.cert-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #fed700, #ffed4e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
 
+.certification-card h5 {
+  color: #fed700;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-provider {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-date {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-tag {
+  background-color: rgba(254, 215, 0, 0.1);
+  color: #fed700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid rgba(254, 215, 0, 0.3);
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: #fed700;
+  border: 2px solid #fed700;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-link:hover {
+  background-color: #fed700;
+  color: #333;
+  transform: scale(1.05);
+}
+
+/*---------------------------Projects---------------------------*/
+.project-content {
+  padding: 80px 0;
+  background-color: #202020;
+}
+
+.project-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-title h4 {
+  color: #fed700;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.project-title p {
+  color: #e5e5e5;
+  font-size: 16px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #333 0%, #404040 100%);
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(254, 215, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+.project-card:hover {
+  border-color: #fed700;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(254, 215, 0, 0.2);
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #fed700, #ffed4e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.project-card h5 {
+  color: #fed700;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-type {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-date {
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-description {
+  color: #e5e5e5;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: transparent;
+  color: #fed700;
+  border: 2px solid #fed700;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.project-link:hover {
+  background-color: #fed700;
+  color: #333;
+  transform: scale(1.05);
+}
 
 /*---------------------------Contact Me---------------------------*/
 .contact-content{
@@ -424,11 +650,6 @@ profile-photo .img{
   display: block;
 }
 
-
-
-
-
-
 /*---------------------------Footer---------------------------*/
 .footer {
     max-width: 950px;
@@ -451,9 +672,6 @@ profile-photo .img{
     font-size: 12px;
   }
 
-
-
-
  /*------------------- Responsive Design on small screen -------------------*/
 
 /* Medium layout */
@@ -473,15 +691,12 @@ profile-photo .img{
   }
 }
 
-
-
 /* tablet layout */
 @media only screen and (min-width:768px) and (max-width:999px){
   .container{
     width: 750px;
   } 
 }  
-
 
 /* Mobile Layout */
 @media only screen and (max-width:767px){
@@ -526,10 +741,18 @@ profile-photo .img{
     max-width: 100%;
     margin-top: 30px;
   }
-  .project{
-    flex-basis: 100%;
-    margin-bottom: 30px;
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-}
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
+  .project-card {
+    margin-bottom: 20px;
+  }
+}
