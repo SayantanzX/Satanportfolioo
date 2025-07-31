@@ -165,16 +165,6 @@ profile-photo .img{
 
  /*---------------------------About---------------------------*/
 
-.about-area{
-  padding-top: 130px;
-  background-color: #202020;
-}
-.about{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom:50px;
-}
 .about-content{
   flex-basis: 60%;
 }
@@ -208,6 +198,145 @@ profile-photo .img{
   border-bottom: 0;
   padding-bottom: 0;
   margin-bottom: 0;
+}
+
+/*---------------------------Skills---------------------------*/
+.skills-content {
+  padding: 80px 0;
+  background-color: #1a1a1a;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-title h4 {
+  color: #fed700;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.skills-title p {
+  color: #e5e5e5;
+  font-size: 16px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-category {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  border: 2px solid #404040;
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(254, 215, 0, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.skill-category:hover::before {
+  left: 100%;
+}
+
+.skill-category:hover {
+  border-color: #fed700;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(254, 215, 0, 0.1);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #fed700, #ffed4e);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 8px 25px rgba(254, 215, 0, 0.3);
+}
+
+.category-header h5 {
+  color: #fed700;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-item {
+  background: rgba(254, 215, 0, 0.05);
+  border: 1px solid rgba(254, 215, 0, 0.2);
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-item:hover {
+  background: rgba(254, 215, 0, 0.1);
+  border-color: #fed700;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(254, 215, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 28px;
+  color: #fed700;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.2);
+  color: #ffed4e;
+}
+
+.skill-item span {
+  color: #e5e5e5;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+}
+
+.skill-item:hover span {
+  color: #fff;
 }
 
 
@@ -463,7 +592,7 @@ profile-photo .img{
 /*---------------------------Projects---------------------------*/
 .project-content {
   padding: 80px 0;
-  background-color: #202020;
+  background-color: #1a1a1a;
 }
 
 .project-title {
@@ -611,6 +740,7 @@ profile-photo .img{
   padding: 100px 0;
   color: #fff;
   text-align: center;
+  background-color: #202020;
 }
 .contact-content .contact-title h4{
   font-size: 40px;
@@ -742,6 +872,20 @@ profile-photo .img{
     margin-top: 30px;
   }
 
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-category {
+    margin-bottom: 20px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
   .certifications-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -755,4 +899,13 @@ profile-photo .img{
   .project-card {
     margin-bottom: 20px;
   }
+}area{
+  padding-top: 130px;
+  background-color: #202020;
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:50px;
 }

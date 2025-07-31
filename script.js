@@ -57,12 +57,31 @@ $(document).ready(function() {
     ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
       origin: "right"
     });
-    ScrollReveal().reveal(".project-title, .contact-title, .certifications-title", {
+    ScrollReveal().reveal(".project-title, .contact-title, .certifications-title, .skills-title", {
       origin: "top"
     });
-    ScrollReveal().reveal(".projects-grid, .contact, .certifications-grid", {
+    ScrollReveal().reveal(".projects-grid, .contact, .certifications-grid, .skills-grid", {
       origin: "bottom"
     });
+
+    // Skills section animations
+    ScrollReveal().reveal(".skill-category", {
+      origin: "bottom",
+      distance: "50px",
+      duration: 1000,
+      delay: 200,
+      interval: 300
+    });
+
+    // Skill item hover effects
+    $(".skill-item").hover(
+      function() {
+        $(this).find('.skill-icon').addClass('animate');
+      },
+      function() {
+        $(this).find('.skill-icon').removeClass('animate');
+      }
+    );
 
   //contact form to excel sheet
   const scriptURL = '';
