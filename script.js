@@ -51,16 +51,16 @@ $(document).ready(function() {
       delay: 200
     });
   
-    ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {
+    ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education-section", {
       origin: "left"
     });
-    ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
+    ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship-section", {
       origin: "right"
     });
-    ScrollReveal().reveal(".project-title, .contact-title, .certifications-title, .skills-title", {
+    ScrollReveal().reveal(".project-title, .contact-title, .certifications-title, .skills-title, .section-title", {
       origin: "top"
     });
-    ScrollReveal().reveal(".projects-grid, .contact, .certifications-grid, .skills-grid", {
+    ScrollReveal().reveal(".projects-grid, .contact, .certifications-grid, .skills-grid, .timeline-container", {
       origin: "bottom"
     });
 
@@ -73,6 +73,15 @@ $(document).ready(function() {
       interval: 300
     });
 
+    // Education and Internship timeline animations
+    ScrollReveal().reveal(".timeline-item", {
+      origin: "left",
+      distance: "50px",
+      duration: 1000,
+      delay: 100,
+      interval: 200
+    });
+
     // Skill item hover effects
     $(".skill-item").hover(
       function() {
@@ -80,6 +89,16 @@ $(document).ready(function() {
       },
       function() {
         $(this).find('.skill-icon').removeClass('animate');
+      }
+    );
+
+    // Timeline item hover effects
+    $(".timeline-item").hover(
+      function() {
+        $(this).addClass('timeline-hover');
+      },
+      function() {
+        $(this).removeClass('timeline-hover');
       }
     );
 
